@@ -1,0 +1,203 @@
+
+@import "_variables.scss";
+
+body{
+	position:relative;
+	margin:0;
+	.chatBox{
+		width:$maxWidth;
+		height:$maxHeight;
+		border:1px solid gray;
+		position:absolute;
+		bottom:0;
+		right:20%;
+		
+		.chat-header{
+			width:100%;
+			height:10%;
+			color:white;
+			font-family:$font_family;
+			background-color:$color_background;
+			.main-nav{
+				@include chat-nav;
+				li.first-nav-li{
+					margin-right:auto;
+						.chat-friend-name{
+							@include anchor_family;
+						}
+					&:before{
+						@include before-sign;
+						}
+					}
+
+				li{
+					vertical-align:center;
+					margin-left:5px;
+					img{
+						opacity:0.7;
+						&:hover{
+							opacity:1;
+							cursor:pointer;
+						}
+					}
+				
+					.user-name{
+						font-size:12px;
+						font-family:calibri;
+					}
+					& a { 
+						.settings-nav{
+							position:absolute;
+							right:-130px;
+							border:1px solid gray;
+							visibility:hidden;
+							padding:2px;
+							width:55%;
+							box-sizing:border-box;
+							overflow:hidden;
+							background-color:white;
+							
+
+							.drop-down{
+								@include settings-nav;
+								flex-direction:column;
+								color:black;
+
+								text-align:left;
+								padding:5px;
+
+								li:nth-child(4),li:nth-child(9){
+									border-bottom:1px solid gray;
+								}
+								li{
+									padding-top:4px;
+									font-size:14px;
+								}
+							}
+
+						}
+						.add-box{
+								width:93%;
+								height:5%;
+								position:absolute;
+								top:30px;
+								right:0px;
+								border-bottom:1px solid gray;
+								@include settings-nav;
+								visibility:hidden;
+								.add-text{
+									width:400px;
+									height:25px;	
+									margin-top:-5px;
+									font-faily:arial;
+									text-indent:2px;
+								}
+								.add-div-btn{
+									margin-left:10px;
+									margin-top:-5px;
+									width:60px;
+									height:25px;
+									color:white;
+									border-radius:3px;
+									border:0px;
+									text-align:center;
+									font-family:calibri;
+									background-color:blue;
+									background-color:rgb(67,106,181);
+								}
+							}
+						 .settings:hover + .settings-nav{
+							background-color:white;
+							visibility:visible;
+
+						}
+						.add:hover + .add-box{
+							background-color:white;
+							visibility:visible;
+						}
+					}
+				}
+			}
+		}
+		.chat-body{
+			width:100%;
+			height:70%;
+			overflow:scroll;
+			overflow-x:hidden;
+			.user{
+				margin-top:15%;
+				img{
+					float:left;
+				}
+				.paragraph{
+					margin-left:3%;
+					float:left;
+					width:70%;
+					font-family:calibri;
+					border-radius:10px 5px 5px 0px;
+					background-color:rgb(241,240,240);
+				}
+			}
+			.me{
+				margin-top:5%;
+				width:70%;
+				margin-right:3%;
+				border-radius:5px 10px 0 10px;
+				float:right;
+				color:white;
+				font-family:calibri;
+				background-color:rgb(64,128,255);
+			}
+		}
+		.chat-parent-footer{
+			textarea{
+				outline:none;
+				border:0px solid black;
+				text-indent:3px;
+				border-top:1px solid gray;
+			}
+			.text-field{
+					width:100%;
+					height:auto;
+					padding:5px;
+					border:0px solid gray;	
+				&:focus{
+					outline:none;
+				}
+			}
+			.chat-child-footer{
+				.footer-nav{
+					@include chat-nav;
+					border-top:0px solid black;
+					margin-top:8px;
+					border-right:0px solid gray;
+					border-left:0px solid gray;
+					overflow-y:hidden;
+					li:first-child{
+						margin-left:2px;
+					}
+					li{
+						margin-left:14px;
+						& img{
+							opacity:0.7;
+
+							&:hover{
+								opacity:1;
+								cursor:pointer;
+							}
+						}
+					}					
+				}
+
+			}
+
+		}
+		@media screen and(max-width:420px){
+			position:absolute;
+			bottom:0;
+			left:0;
+
+		}
+
+	}
+} 

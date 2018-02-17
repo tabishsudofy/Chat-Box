@@ -1,0 +1,42 @@
+	/*VARIABLE DECLARATION*/
+
+$color_background:rgb(64,128,255);
+$maxWidth:300px;
+$maxHeight:340px;
+$user-color:rgb(83,189,62);
+$font_family:calibri;
+
+	/*MIXINS*/
+
+@mixin anchor-family{
+	text-decoration:none;
+	color:white;
+}
+@mixin chat-nav{
+	display:flex;
+	padding:5px;
+	list-style:none;
+	flex-direction:row;
+	margin-top:0px;
+	border-radius:3px;
+}
+@mixin settings-nav{
+	display:flex;
+	padding:10px;
+	list-style:none;
+	margin:0;
+	text-align:center;
+}
+@mixin border{
+	border:1px solid gray;
+}
+@mixin before-sign{
+	content:"";
+	width:6px;
+	height:5px;
+	display:inline-block;
+	background-color:$user-color;
+	@include border;
+	border-radius:50%;
+	margin-right:2px;
+}

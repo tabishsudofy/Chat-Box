@@ -1,0 +1,177 @@
+/*VARIABLE DECLARATION*/
+/*MIXINS*/
+body {
+  position: relative;
+  margin: 0; }
+  body .chatBox {
+    width: 300px;
+    height: 340px;
+    border: 1px solid gray;
+    position: absolute;
+    bottom: 0;
+    right: 20%; }
+    body .chatBox .chat-header {
+      width: 100%;
+      height: 10%;
+      color: white;
+      font-family: calibri;
+      background-color: #4080ff; }
+      body .chatBox .chat-header .main-nav {
+        display: flex;
+        padding: 5px;
+        list-style: none;
+        flex-direction: row;
+        margin-top: 0px;
+        border-radius: 3px; }
+        body .chatBox .chat-header .main-nav li.first-nav-li {
+          margin-right: auto; }
+          body .chatBox .chat-header .main-nav li.first-nav-li .chat-friend-name {
+            text-decoration: none;
+            color: white; }
+          body .chatBox .chat-header .main-nav li.first-nav-li:before {
+            content: "";
+            width: 6px;
+            height: 5px;
+            display: inline-block;
+            background-color: #53bd3e;
+            border: 1px solid gray;
+            border-radius: 50%;
+            margin-right: 2px; }
+        body .chatBox .chat-header .main-nav li {
+          vertical-align: center;
+          margin-left: 5px; }
+          body .chatBox .chat-header .main-nav li img {
+            opacity: 0.7; }
+            body .chatBox .chat-header .main-nav li img:hover {
+              opacity: 1;
+              cursor: pointer; }
+          body .chatBox .chat-header .main-nav li .user-name {
+            font-size: 12px;
+            font-family: calibri; }
+          body .chatBox .chat-header .main-nav li a .settings-nav {
+            position: absolute;
+            right: -130px;
+            border: 1px solid gray;
+            visibility: hidden;
+            padding: 2px;
+            width: 55%;
+            box-sizing: border-box;
+            overflow: hidden;
+            background-color: white; }
+            body .chatBox .chat-header .main-nav li a .settings-nav .drop-down {
+              display: flex;
+              padding: 10px;
+              list-style: none;
+              margin: 0;
+              text-align: center;
+              flex-direction: column;
+              color: black;
+              text-align: left;
+              padding: 5px; }
+              body .chatBox .chat-header .main-nav li a .settings-nav .drop-down li:nth-child(4), body .chatBox .chat-header .main-nav li a .settings-nav .drop-down li:nth-child(9) {
+                border-bottom: 1px solid gray; }
+              body .chatBox .chat-header .main-nav li a .settings-nav .drop-down li {
+                padding-top: 4px;
+                font-size: 14px; }
+          body .chatBox .chat-header .main-nav li a .add-box {
+            width: 93%;
+            height: 5%;
+            position: absolute;
+            top: 30px;
+            right: 0px;
+            border-bottom: 1px solid gray;
+            display: flex;
+            padding: 10px;
+            list-style: none;
+            margin: 0;
+            text-align: center;
+            visibility: hidden; }
+            body .chatBox .chat-header .main-nav li a .add-box .add-text {
+              width: 400px;
+              height: 25px;
+              margin-top: -5px;
+              font-faily: arial;
+              text-indent: 2px; }
+            body .chatBox .chat-header .main-nav li a .add-box .add-div-btn {
+              margin-left: 10px;
+              margin-top: -5px;
+              width: 60px;
+              height: 25px;
+              color: white;
+              border-radius: 3px;
+              border: 0px;
+              text-align: center;
+              font-family: calibri;
+              background-color: blue;
+              background-color: #436ab5; }
+          body .chatBox .chat-header .main-nav li a .settings:hover + .settings-nav {
+            background-color: white;
+            visibility: visible; }
+          body .chatBox .chat-header .main-nav li a .add:hover + .add-box {
+            background-color: white;
+            visibility: visible; }
+    body .chatBox .chat-body {
+      width: 100%;
+      height: 70%;
+      overflow: scroll;
+      overflow-x: hidden; }
+      body .chatBox .chat-body .user {
+        margin-top: 15%; }
+        body .chatBox .chat-body .user img {
+          float: left; }
+        body .chatBox .chat-body .user .paragraph {
+          margin-left: 3%;
+          float: left;
+          width: 70%;
+          font-family: calibri;
+          border-radius: 10px 5px 5px 0px;
+          background-color: #f1f0f0; }
+      body .chatBox .chat-body .me {
+        margin-top: 5%;
+        width: 70%;
+        margin-right: 3%;
+        border-radius: 5px 10px 0 10px;
+        float: right;
+        color: white;
+        font-family: calibri;
+        background-color: #4080ff; }
+    body .chatBox .chat-parent-footer textarea {
+      outline: none;
+      border: 0px solid black;
+      text-indent: 3px;
+      border-top: 1px solid gray; }
+    body .chatBox .chat-parent-footer .text-field {
+      width: 100%;
+      height: auto;
+      padding: 5px;
+      border: 0px solid gray; }
+      body .chatBox .chat-parent-footer .text-field:focus {
+        outline: none; }
+    body .chatBox .chat-parent-footer .chat-child-footer .footer-nav {
+      display: flex;
+      padding: 5px;
+      list-style: none;
+      flex-direction: row;
+      margin-top: 0px;
+      border-radius: 3px;
+      border-top: 0px solid black;
+      margin-top: 8px;
+      border-right: 0px solid gray;
+      border-left: 0px solid gray;
+      overflow-y: hidden; }
+      body .chatBox .chat-parent-footer .chat-child-footer .footer-nav li:first-child {
+        margin-left: 2px; }
+      body .chatBox .chat-parent-footer .chat-child-footer .footer-nav li {
+        margin-left: 14px; }
+        body .chatBox .chat-parent-footer .chat-child-footer .footer-nav li img {
+          opacity: 0.7; }
+          body .chatBox .chat-parent-footer .chat-child-footer .footer-nav li img:hover {
+            opacity: 1;
+            cursor: pointer; }
+    @media screen and (max-width: 420px) {
+      body .chatBox {
+        position: absolute;
+        bottom: 0;
+        left: 0; } }
+
+/*# sourceMappingURL=style.css.map */
